@@ -11,6 +11,7 @@
 
 ## Setting Up the SD-Card Image 
 使用 [balenaEtcher](https://etcher.balena.io/) 將剛剛下載的檔案燒錄到SD-Card內
+
 也可以參考官方步驟來燒錄
 
 [Setting up the SD Card Image (xilinx.com)](https://www.xilinx.com/products/som/kria/kd240-drives-starter-kit/kd240-getting-started/setting-up-the-sd-card-image.html)
