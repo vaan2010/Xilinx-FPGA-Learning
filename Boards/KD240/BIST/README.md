@@ -101,8 +101,10 @@ pytest-3 --board kd240
 5. 測試結果
 + 測試成功項目
 <img src="Images/success.png"/>
+
 + 測試失敗項目
 <img src="Images/fail.png"/>
+
 + 測試總結
 <img src="Images/Summarization.png"/>
 
