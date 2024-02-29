@@ -5,5 +5,5 @@
 
 ## Download Ubuntu 22.04
 可以從以下網址下載檔案
-![image](https://github.com/vaan2010/Xilinx-FPGA-Learning/assets/38204276/3d7bc156-a4e1-4853-b9e7-bfc2024220f1)
+[Install Ubuntu on AMD | Ubuntu]([https://pages.github.com/](https://ubuntu.com/download/amd)https://ubuntu.com/download/amd)
 
