@@ -7,6 +7,6 @@
 可以從此網址下載檔案
 [Install Ubuntu on AMD | Ubuntu](https://ubuntu.com/download/amd)
 
-​<img src="Images/Ubuntu 22.04.png" height="513"/>
+​<img src="Images/Ubuntu 22.04.png" = 853x513/>
 
 
