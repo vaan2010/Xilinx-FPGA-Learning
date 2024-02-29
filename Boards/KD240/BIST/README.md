@@ -1,6 +1,7 @@
 # Built-In Self Test Flow
 + 此篇主要說明如何針對KD240進行周邊功能上的官方測試
 
+**Issue: 目前發現安裝 Kria-PYNQ 後仍無法成功執行 FOC 相關測試**
 **Last update: 2024/02/29**
 
 ## Download Ubuntu 22.04
@@ -94,7 +95,7 @@ pytest-3 --board kd240
 ```
 測試的選項可以參照官方說明的細節
 
-[Setting up the Board and Application Deployment — Kria™ KD240 1.0 documentation] (https://xilinx.github.io/kria-apps-docs/kd240/build/html/docs/bist/docs/run.html)
+[Setting up the Board and Application Deployment — Kria™ KD240 1.0 documentation]([https://mobaxterm.mobatek.net/download.html](https://xilinx.github.io/kria-apps-docs/kd240/build/html/docs/bist/docs/run.html))
 
 5. 測試結果
 + 測試成功項目
@@ -102,5 +103,5 @@ pytest-3 --board kd240
 + 測試失敗項目
 <img src="Images/fail.png"/>
 + 測試總結
-<img src="Summarization.png"/>
+<img src="Images/Summarization.png"/>
 
