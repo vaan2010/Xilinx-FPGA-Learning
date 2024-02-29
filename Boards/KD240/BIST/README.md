@@ -31,7 +31,7 @@
 <img src="Images/Uart communication.png"/>
 
 ## Set Ubuntu environment and download Xilinx package
-1. 登入帳號和密碼為
+### 1. 登入帳號和密碼為
 ```
 Account: ubuntu
 Password: ubuntu
