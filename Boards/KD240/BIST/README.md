@@ -17,3 +17,13 @@
 [Setting up the SD Card Image (xilinx.com)](https://www.xilinx.com/products/som/kria/kd240-drives-starter-kit/kd240-getting-started/setting-up-the-sd-card-image.html)
 
 <img src="Images/Program SD Card.png"/>
+
+依照下圖方式插入到 KD240 的 SD Card 槽中
+
+<img src="Images/KD240 Hardware Setting.png"/>
+
+## Power on KD240
+
+依照下圖上電後開啟 [MobaXtern](https://mobaxterm.mobatek.net/download.html) 與 KD240 透過 UART 溝通
+
+<img src="Images/Uart communication.png"/>
