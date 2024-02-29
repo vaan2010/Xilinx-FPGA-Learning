@@ -96,7 +96,7 @@ pytest-3 --board kd240
 ```
 測試的選項可以參照官方說明的細節
 
-[Setting up the Board and Application Deployment — Kria™ KD240 1.0 documentation]([https://mobaxterm.mobatek.net/download.html](https://xilinx.github.io/kria-apps-docs/kd240/build/html/docs/bist/docs/run.html))
+[Setting up the Board and Application Deployment — Kria™ KD240 1.0 documentation](https://xilinx.github.io/kria-apps-docs/kd240/build/html/docs/bist/docs/run.html)
 
 5. 測試結果
 + 測試成功項目
