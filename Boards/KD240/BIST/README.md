@@ -2,7 +2,7 @@
 + 此篇主要說明如何針對KD240進行周邊功能上的官方測試
 
 **Last update: 2024/02/29**
-- [] **Issue: 目前發現安裝 Kria-PYNQ 後仍無法成功執行 FOC 相關測試**
+- [ ] **Issue: 目前發現安裝 Kria-PYNQ 後仍無法成功執行 FOC 相關測試**
 
 ## Download Ubuntu 22.04
 可以從此網址下載檔案
