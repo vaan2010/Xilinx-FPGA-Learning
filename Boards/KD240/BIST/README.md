@@ -7,7 +7,7 @@
 可以從此網址下載檔案
 [Install Ubuntu on AMD | Ubuntu](https://ubuntu.com/download/amd)
 
-​<img src="Images/Ubuntu 22.04.png" width="600" height="360"/>
+​<img src="Images/Ubuntu 22.04.png"/>
 
 ## Setting Up the SD-Card Image 
 使用 [balenaEtcher](https://etcher.balena.io/) 將剛剛下載的檔案燒錄到SD-Card內
