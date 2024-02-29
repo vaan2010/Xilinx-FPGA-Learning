@@ -5,6 +5,5 @@
 
 ## Download Ubuntu 22.04
 可以從以下網址下載檔案
-
 [Install Ubuntu on AMD | Ubuntu](https://ubuntu.com/download/amd)
 
