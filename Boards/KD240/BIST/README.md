@@ -37,7 +37,7 @@ Account: ubuntu
 Password: ubuntu
 ```
 
-2. 接著依序輸入以下指令進行更新和 Xilinx Package 安裝
+### 2. 接著依序輸入以下指令進行更新和 Xilinx Package 安裝
 ```
 sudo apt update
 sudo apt upgrade
@@ -50,7 +50,7 @@ sudo apt search xlnx-firmware-kd240 ---> 尋找 BIST 的 firmware，也可以用
 sudo apt install xlnx-firmware-kd240-bist
 ```
 
-3. 安裝 Kria-PYNQ
+### 3. 安裝 Kria-PYNQ
 + 安裝 Kria-PYNQ 會一併安裝 BIST 內關於 FOC Control 的 Dependencies
 ```
 git clone https://github.com/Xilinx/Kria-PYNQ.git
@@ -60,19 +60,19 @@ sudo reboot
 ```
 
 ## Load KD240 BIST firmware and Run the Test
-1. 首先 unload 預先的 firmware 以及 load KD240 BIST firmware
+### 1. 首先 unload 預先的 firmware 以及 load KD240 BIST firmware
 ```
 sudo xmutil unloadapp
 sudo xmutil loadapp kd240-bist
 ```
 
-2. 安裝 Docker，並下載 Kria BIST 的 Docker Image
+### 2. 安裝 Docker，並下載 Kria BIST 的 Docker Image
 ```
 sudo apt-get install docker.io
 sudo docker pull xilinx/kria-bist:2023.1
 ```
 
-3. Docker 啟動
+### 3. Docker 啟動
 ```
 sudo docker run \
     --env=DISPLAY \
@@ -89,7 +89,7 @@ sudo docker run \
     -it xilinx/kria-bist:2023.1 bash 
 ```
 
-4. 執行測試
+### 4. 執行測試
 ```
 cd /opt/xilinx/kria-bist/tests
 pytest-3 --board kd240
@@ -98,7 +98,7 @@ pytest-3 --board kd240
 
 [Setting up the Board and Application Deployment — Kria™ KD240 1.0 documentation](https://xilinx.github.io/kria-apps-docs/kd240/build/html/docs/bist/docs/run.html)
 
-5. 測試結果
+### 5. 測試結果
 + 測試成功項目
 <img src="Images/success.png"/>
 
