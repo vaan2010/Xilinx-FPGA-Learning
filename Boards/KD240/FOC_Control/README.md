@@ -81,3 +81,8 @@ cd /opt/xilinx/xlnx-app-kd240-foc-motor-ctr/bin
 <img src="Images/FOC.png"/>
 <img src="Images/FOC.gif"/>
 
+## Reference
+1. [FOC Motor Control App](https://github.com/Xilinx/foc-motor-ctrl)
+
+
+
