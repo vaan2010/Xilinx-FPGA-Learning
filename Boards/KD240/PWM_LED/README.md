@@ -113,6 +113,11 @@ XDC 內容可與 KD240 電路圖對照
 <img src="Images/Vitis13.png"/>
 
 2. 建立好 TCL 檔之後，在 Vitis 的 xsct 內輸入以下
+```
+connect
+source ./bootmode.tcl ---> 請按照自己放置 TCL 檔案的位置 cd 過去
+boot_jtag
+```
 <img src="Images/Vitis14.png"/>
 
 + 修改 Run Configuration
@@ -124,6 +129,96 @@ XDC 內容可與 KD240 電路圖對照
 
 ## Program and Run Demo
 Program 就成功了
+
 <img src="Images/Vitis17.png"/>
 <img src="Images/Demo.gif"/>
+
+## PYNQ
++ 這邊開始介紹如何透過 Python 控制在 Vivado 用 RTL Code 寫好的 IP
++ Python 控制 IP 的 function 需要參考 Vitis
++ 新增 PL Ethernet 端的 LED 燈閃爍，需要從 Vivado 端重新拉 GPIO LED 出來
+<img src="Images/PYNQ1.png"/>
+
+1. 燒錄官方 Ubuntu Image 到 KD240 中，可參考 KD240 BIST 端的操作
++ Download Ubuntu 22.04 and put it in SDcard through balenaetcher
++ Boot Ubuntu 22.04 from KD240
++ sudo add-apt-repository ppa:xilinx-apps (Optional)
++ Update Ubuntu package
+```
+sudo apt update
+sudo apt upgrade
+```
++ Install Xilinx system management snap package ---> sudo snap install xlnx-config --classic (Optional)
++ Install Kria-PYNQ
+```
+git clone https://github.com/Xilinx/Kria-PYNQ.git
+cd Kria-PYNQ
+sudo bash install.sh -b KD240
+```
+
+2. 成功安裝後出現下圖，這時候在同網域下的瀏覽器輸入黃字部分的網址，即可開啟 Jupyter Lab
+<img src="Images/PYNQ2.png"/>
+
+3. 建立一個名為 PWM_LED 的資料夾
+<img src="Images/PYNQ3.png"/>
+
+3. 進入 PWM_LED 資料夾，將 Vivado 所產生的 .bit 以及 .hwh 都放進來，並創建一新 python 文件
++ .hwh 檔案位於 Vivado 的 .gen\sources_1\bd\design_1\hw_handoff 資料夾內
+<img src="Images/PYNQ4.png"/>
+
+4. 進入 python 文件開始撰寫，以下介紹 Coding 流程與 API 用法，首先要 import python 與 pynq 的 library package 進來
+```
+from pynq import Overlay     ---> overlay 為 loading bitstream 時用到
+from pynq.lib import AxiGPIO ---> AxiGPIO 針對設計內有用到 GPIO 的區塊可以進行 register 讀寫
+import time                  ---> time 做為 delay 時間控制用
+from pynq import MMIO        ---> MMIO 為 PS 控制 PL 端時讀寫 register 用，此篇則是以控制 PL PWM IP 為目的
+import multiprocessing as mp ---> multiprocessing 可以執行多個迴圈同時運作
+```
++ Overlay loading bitstream，注意一定會需要 .bit 和 .hwh
+<img src="Images/PYNQ5.png"/>
++ help(overlay) 可以查看當前 .bit 內用到什麼 IP，架構如何，以此與 Vivado 內的設計相呼應
+<img src="Images/PYNQ6.png"/>
+
++ 初始化 IP
+<img src="Images/PYNQ7.png"/>
++ 因 KD240 PL ethernet 上的 LED 有兩組，因此要額外再設定 channel (只有一組時也要設定 channel1)
+<img src="Images/PYNQ8.png"/>
++ 設定 GPIO direction，即 mask，0x0 為 input，0xf 為 output，並設定 LED 交互發光的 delay 數值 (秒為單位)
+<img src="Images/PYNQ9.png"/>
+
++ 撰寫 Ethernet LED 發亮動作時的 Function
+<img src="Images/PYNQ10.png"/>
+```
+PL ethernet 亮燈數值為
+0: 亮右邊
+1: 全不亮
+2: 全亮
+3: 亮左邊
+```
+
++ 設定 PWM IP 的記憶體和 Register 數值
+<img src="Images/PYNQ11.png"/>
++ 這幾點實質可以參照 Vitis 以及 Vivado 內的 Address Editor
+<img src="Images/PYNQ12.png"/>
+
++ 撰寫 PWM IP Function，MMIO 會對記憶體位置去讀寫數值，基本上跟 Vitis 的邏輯概念一樣，可以照搬前面章節 Vitis C Code 改為 Python Code
+<img src="Images/PYNQ13.png"/>
+
++ 為了讓兩個迴圈同時動作，這邊利用 Multi-Process 將兩個 Function 加入到不同的 Process 中，並且同步運行
+<img src="Images/PYNQ14.png"/>
+
+5. Demo 結果
+<img src="Images/Ethernet.gif"/>
+<img src="Images/PWM.gif"/>
+
+## Reference
+1. [【ZYNQ Ultrascale+ MPSOC FPGA教程】第三十章 自定义IP实验](https://www.cnblogs.com/alinx/p/14311827.html)
+2. [Bootmodes — Kria™ SOM 2022.1 documentation](https://xilinx.github.io/kria-apps-docs/creating_applications/2022.1/build/html/docs/bootmodes.html)
+3. [Development process and questions about KR260 standalone](https://support.xilinx.com/s/question/0D54U00005VTYUvSAP/development-process-and-questions-about-kr260-standalone?language=en_US)
+4. [ug1093-kd240-starter-kit.pdf](https://docs.xilinx.com/viewer/book-attachment/Pkj1VOY1YOjY5KknJN14Tw/IxMAXzlNJgDQGeaYQ2ffUw)
+5. [Loading an Overlay — Python productivity for Zynq (Pynq) v1.0](https://pynq.readthedocs.io/en/v2.3/pynq_overlays/loading_an_overlay.html)
+6. [pynq.lib.axigpio Module — Python productivity for Zynq (Pynq) v1.0](https://pynq.readthedocs.io/en/v2.3/pynq_package/pynq.lib/pynq.lib.axigpio.html#pynq-lib-axigpio)
+7. [pynq框架下自定义ip的使用_pynq ip](https://blog.csdn.net/quhai1340/article/details/113971309)
+
+
 
