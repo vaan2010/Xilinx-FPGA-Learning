@@ -164,10 +164,13 @@ sudo bash install.sh -b KD240
 <img src="Images/PYNQ3.png"/>
 
 3. 進入 PWM_LED 資料夾，將 Vivado 所產生的 .bit 以及 .hwh 都放進來，並創建一新 python 文件
+
 + .hwh 檔案位於 Vivado 的 .gen\sources_1\bd\design_1\hw_handoff 資料夾內
+
 <img src="Images/PYNQ4.png"/>
 
 4. 進入 python 文件開始撰寫，以下介紹 Coding 流程與 API 用法，首先要 import python 與 pynq 的 library package 進來
+
 ```
 from pynq import Overlay     ---> overlay 為 loading bitstream 時用到
 from pynq.lib import AxiGPIO ---> AxiGPIO 針對設計內有用到 GPIO 的區塊可以進行 register 讀寫
@@ -175,20 +178,26 @@ import time                  ---> time 做為 delay 時間控制用
 from pynq import MMIO        ---> MMIO 為 PS 控制 PL 端時讀寫 register 用，此篇則是以控制 PL PWM IP 為目的
 import multiprocessing as mp ---> multiprocessing 可以執行多個迴圈同時運作
 ```
+
 + Overlay loading bitstream，注意一定會需要 .bit 和 .hwh
 <img src="Images/PYNQ5.png"/>
+
 + help(overlay) 可以查看當前 .bit 內用到什麼 IP，架構如何，以此與 Vivado 內的設計相呼應
 <img src="Images/PYNQ6.png"/>
 
 + 初始化 IP
 <img src="Images/PYNQ7.png"/>
+
 + 因 KD240 PL ethernet 上的 LED 有兩組，因此要額外再設定 channel (只有一組時也要設定 channel1)
 <img src="Images/PYNQ8.png"/>
+
 + 設定 GPIO direction，即 mask，0x0 為 input，0xf 為 output，並設定 LED 交互發光的 delay 數值 (秒為單位)
 <img src="Images/PYNQ9.png"/>
 
 + 撰寫 Ethernet LED 發亮動作時的 Function
+
 <img src="Images/PYNQ10.png"/>
+
 ```
 PL ethernet 亮燈數值為
 0: 亮右邊
@@ -199,6 +208,7 @@ PL ethernet 亮燈數值為
 
 + 設定 PWM IP 的記憶體和 Register 數值
 <img src="Images/PYNQ11.png"/>
+
 + 這幾點實質可以參照 Vitis 以及 Vivado 內的 Address Editor
 <img src="Images/PYNQ12.png"/>
 
