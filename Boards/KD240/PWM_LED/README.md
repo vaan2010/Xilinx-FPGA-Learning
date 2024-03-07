@@ -163,13 +163,13 @@ sudo bash install.sh -b KD240
 3. 建立一個名為 PWM_LED 的資料夾
 <img src="Images/PYNQ3.png"/>
 
-3. 進入 PWM_LED 資料夾，將 Vivado 所產生的 .bit 以及 .hwh 都放進來，並創建一新 python 文件
+4. 進入 PWM_LED 資料夾，將 Vivado 所產生的 .bit 以及 .hwh 都放進來，並創建一新 python 文件
 
 + .hwh 檔案位於 Vivado 的 .gen\sources_1\bd\design_1\hw_handoff 資料夾內
 
 <img src="Images/PYNQ4.png"/>
 
-4. 進入 python 文件開始撰寫，以下介紹 Coding 流程與 API 用法，首先要 import python 與 pynq 的 library package 進來
+5. 進入 python 文件開始撰寫，以下介紹 Coding 流程與 API 用法，首先要 import python 與 pynq 的 library package 進來
 
 ```
 from pynq import Overlay     ---> overlay 為 loading bitstream 時用到
@@ -218,7 +218,7 @@ PL ethernet 亮燈數值為
 + 為了讓兩個迴圈同時動作，這邊利用 Multi-Process 將兩個 Function 加入到不同的 Process 中，並且同步運行
 <img src="Images/PYNQ14.png"/>
 
-5. Demo 結果
+6. Demo 結果
 <img src="Images/Ethernet.gif"/>
 <img src="Images/PWM.gif"/>
 
