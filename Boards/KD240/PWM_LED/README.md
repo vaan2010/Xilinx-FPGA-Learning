@@ -58,6 +58,7 @@
 <img src="Images/IP19.png"/>
 
 XDC 內容可與 KD240 電路圖對照
+
 <img src="Images/IP20.png"/>
 
 ## Generate Bitstream－產生燒錄檔並 Export 硬體資訊給 Vitis
