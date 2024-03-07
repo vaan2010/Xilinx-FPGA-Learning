@@ -5,7 +5,7 @@
 - [x] **使用 Vivado & Vitis Design Flow 達成**
 - [x] **使用 PYNQ Design Flow 達成**
 
-## + Vivado
+## Vivado Part
 ## 自定義 PWM IP
 + Vivado 內部在頂端選單的 Tools 擁有新建及打包 IP 的選項，接下來此段落會介紹如何將 PWM IP 加入到 IP Catalog 中供日後使用
 1. 於 Vivado 內選取 Create and Package New IP
@@ -67,7 +67,6 @@ XDC 內容可與 KD240 電路圖對照
 2. Export Hardware，會生成 .xsa 檔案提供 Vitis import
 <img src="Images/IP22.png"/>
 
-[!IMPORTANT]
 3. 自定義 IP 要改 xsa 內容，透過 winrar 開啟 xsa 並點選以下路徑開啟 Makefile
 <img src="Images/IP23.png"/>
 
