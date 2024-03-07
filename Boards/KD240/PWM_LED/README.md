@@ -1,4 +1,4 @@
-![image](https://github.com/vaan2010/Xilinx-FPGA-Learning/assets/38204276/c71b7a5e-ec41-4571-a172-052cea5b4f4d)# KD240 PWM LED
+# KD240 PWM LED
 + 此篇主要說明如何在 KD240 上實現呼吸燈
 
 **Last update: 2024/03/07**
