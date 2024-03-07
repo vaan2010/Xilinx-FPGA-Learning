@@ -1,5 +1,5 @@
 # Built-In Self Test Flow
-+ 此篇主要說明如何針對KD240進行周邊功能上的官方測試
++ 此篇主要說明如何針對 KD240 進行周邊功能上的官方測試
 
 **Last update: 2024/02/29**
 - [ ] **Issue: 目前發現安裝 Kria-PYNQ 後仍無法成功執行 FOC 相關測試**
@@ -11,7 +11,7 @@
 ​<img src="Images/Ubuntu 22.04.png"/>
 
 ## Setting Up the SD-Card Image 
-使用 [balenaEtcher](https://etcher.balena.io/) 將剛剛下載的檔案燒錄到SD-Card內
+使用 [balenaEtcher](https://etcher.balena.io/) 將剛剛下載的檔案燒錄到 SD-Card 內
 
 也可以參考官方步驟來燒錄
 
