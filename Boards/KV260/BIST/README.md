@@ -4,18 +4,22 @@
 **Last update: 2024/03/07**
 
 + Must be connected to Ethernet port!
-+ Download the following files: including Ubuntu 22.04 and Boot Firmware 
++ Download the following files: including Ubuntu 22.04 and Boot Firmware
+
 ​<img src="Images/KV1.png"/>
 
 + The minimum Linux kernel version required is 5.15.0.1022.26, or you will encounter the following error:
+
 ​<img src="Images/KV2.png"/>
 
 Module ar1335 not found 等於 mipi sensor not found
 
 + Program the Ubuntu 22.04 through balenaetcher
+
 <img src="Images/KV3.png"/>
 
 + 設定 KV(R)260 周邊接的裝置
+
 <img src="Images/KV4.png"/>
 
 ## Power on KV(R)260
