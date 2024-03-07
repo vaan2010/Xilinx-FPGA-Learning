@@ -11,7 +11,7 @@
 ​<img src="../BIST/Images/Ubuntu 22.04.png"/>
 
 ## Setting Up the SD-Card Image 
-使用 [balenaEtcher](https://etcher.balena.io/) 將剛剛下載的檔案燒錄到SD-Card內
+使用 [balenaEtcher](https://etcher.balena.io/) 將剛剛下載的檔案燒錄到 SD-Card 內
 
 也可以參考官方步驟來燒錄
 
