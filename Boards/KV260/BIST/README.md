@@ -101,18 +101,18 @@ pytest-3 -k display --board kv260
 <img src="Images/KV9.png"/>
 
 ## 附錄
-### Temporary failure in name resolution Error
+### 1. Temporary failure in name resolution Error
 [Ubuntu 20.04 server不能ping，提示“Temporary failure in name resolution”的解决方法](https://blog.csdn.net/donaldsy/article/details/119973990)
 ```
 sudo systemctl restart systemd-resolved.service ---> this command will solve this problem
 ```
 
-### Install v2022.1-09152304_update3 Boot Firmware
+### 2. Install v2022.1-09152304_update3 Boot Firmware
 ```
 sudo xmutil bootfw_update -i <path to boot.bin>
 ```
 
-### Unsupported authorisation protocol
+### 3. Unsupported authorisation protocol
 
 ```
 xauth -v list ---> Using authority file /home/ubuntu/.Xauthority
