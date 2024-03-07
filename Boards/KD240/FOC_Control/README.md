@@ -79,5 +79,5 @@ cd /opt/xilinx/xlnx-app-kd240-foc-motor-ctr/bin
 
 ### 測試結果
 <img src="Images/FOC.png"/>
-
+<img src="Images/FOC.gif"/>
 
