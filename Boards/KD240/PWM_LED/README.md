@@ -67,6 +67,7 @@ XDC 內容可與 KD240 電路圖對照
 2. Export Hardware，會生成 .xsa 檔案提供 Vitis import
 <img src="Images/IP22.png"/>
 
+[!IMPORTANT]
 3. 自定義 IP 要改 xsa 內容，透過 winrar 開啟 xsa 並點選以下路徑開啟 Makefile
 <img src="Images/IP23.png"/>
 
