@@ -37,7 +37,7 @@ sudo apt upgrade
 sudo add-apt-repository ppa:xilinx-apps
 sudo apt update
 sudo apt upgrade
-sudo snap install xlnx-config --classic --channel=1.x
+sudo snap install xlnx-config --classic
 sudo apt search bist
 sudo apt install xlnx-firmware-kv260-bist ---> 尋找 BIST 的 firmware
 ```
