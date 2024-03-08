@@ -32,6 +32,8 @@ Password: ubuntu
 
 ### 2. 接著依序輸入以下指令進行更新和 Xilinx Package 安裝
 ```
+sudo apt update
+sudo apt upgrade
 sudo add-apt-repository ppa:xilinx-apps
 sudo apt update
 sudo apt upgrade
