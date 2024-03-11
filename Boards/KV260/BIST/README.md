@@ -45,13 +45,31 @@ sudo apt install xlnx-firmware-kv260-bist ---> 尋找 BIST 的 firmware
 ### 3. Update the Boot Firmware (KR260 may be different)
 可以到官方的 [Setting up the Board and Application Deployment](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/bist/docs/run.html) 查看各自不同的 Kria 系列需要更新的檔案有哪些
 
-<img src="Images/BOOT1.png"/>
+<img src="Images/BOOT1.PNG"/>
 
 以及到 [Kria Wiki](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+SOMs+Starter+Kits#Boot-Firmware-Updates) 去下載相對應的檔案
 
-<img src="Images/BOOT2.png"/>
+<img src="Images/BOOT2.PNG"/>
 
+再來需要將 Temporary failure in name resolution Error 的問題解決
+```
+sudo systemctl restart systemd-resolved.service ---> this command will solve this problem
+```
 
+最後則是處理 Unsupported authorisation protocol 的狀況
+```
+rm -rf ~/.Xaut*
+sudo reboot
+```
+
+重開機之後輸入以下指令
+```
+xauth -v list ---> Using authority file /home/ubuntu/.Xauthority
+```
+
+若看到以下畫面就代表成功了
+
+<img src="Images/KV10.png"/>
 
 ## Load KV(R)260 BIST firmware and Run the Test
 ### 1. 首先 unload 預先的 firmware 以及 load KV(R)260 BIST firmware
