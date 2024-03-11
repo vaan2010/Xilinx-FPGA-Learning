@@ -54,15 +54,15 @@ sudo xmutil listapps
 sudo xmutil unloadapp
 sudo xmutil loadapp kv260-bist
 sudo modprobe ar1335 (KR260 has no ar1335)
+
+sudo xmutil desktop_disable
+sudo systemctl stop fancontrol
 ```
 
 ### 2. 安裝 Docker，並下載 Kria BIST 的 Docker Image
 ```
 sudo apt-get install docker.io
 sudo docker pull xilinx/kria-bist:2022.2
-
-sudo xmutil desktop_disable
-sudo systemctl stop fancontrol
 ```
 
 ### 3. Docker 啟動
