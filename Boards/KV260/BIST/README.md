@@ -42,9 +42,16 @@ sudo apt search bist
 sudo apt install xlnx-firmware-kv260-bist ---> 尋找 BIST 的 firmware
 ```
 
-### 3. Update the flash kernel (KR260 may be different)
-<img src="Images/KV5.png"/>
-<img src="Images/KV6.png"/>
+### 3. Update the Boot Firmware (KR260 may be different)
+可以到官方的 [Setting up the Board and Application Deployment](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/bist/docs/run.html) 查看各自不同的 Kria 系列需要更新的檔案有哪些
+
+<img src="Images/BOOT1.png"/>
+
+以及到 [Kria Wiki](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+SOMs+Starter+Kits#Boot-Firmware-Updates) 去下載相對應的檔案
+
+<img src="Images/BOOT2.png"/>
+
+
 
 ## Load KV(R)260 BIST firmware and Run the Test
 ### 1. 首先 unload 預先的 firmware 以及 load KV(R)260 BIST firmware
