@@ -27,7 +27,9 @@
 
 ### 5. Application 的 Templates 選擇 Simple
 可以看到該 Templates 說明 works only for AIE Emulation and SW(x86) Emulation
+
 主要原因為 the template does not include any I/O to feed the AIE application or any PS application which will be required for a full system running in hardware.
+
 因此只能做軟體模擬
 
 <img src="Images/AI6.PNG"/>
