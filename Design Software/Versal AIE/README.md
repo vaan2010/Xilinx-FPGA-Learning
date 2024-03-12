@@ -43,4 +43,42 @@
 
 <img src="Images/AI8.PNG"/>
 
+### 8. 開啟 golden.txt
+此份文件等於是運算完後的正確結果，可以當成是 ground truth
+
+<img src="Images/AI9.PNG"/>
+
+兩者放在一起比對如下
+
+<img src="Images/AI10.PNG"/>
+
+### 9. 接著到 src 底下，可以看到 kernels 內部檔案包含對運算過程的描述
+NUM_SAMPLES 代表一次抓取來運算的資料個數
+
+<img src="Images/AI11.PNG"/>
+
+kernels.cc 描述了運算過程，基本上是複數的運算
+
+<img src="Images/AI12.PNG"/>
+
+一個被描述的 Kernel 只能在同一個 AIE 內被執行
+
+一個 AIE 可以同時執行多個 Kernels
+
+CINT16 代表 16-bit Real number with 16-bit Imaginary number
+
+<img src="Images/AI13.PNG"/>
+
+因此該算術過程整體需要的頻寬為 128 bytes
+
+<img src="Images/AI14.PNG"/>
+
+### 10. 開啟 project.h
+裏頭定義了 kernel 之間的執行順序、設定 kernel 節點以及單個 AIE 的處理時間
+
+<img src="Images/AI15.PNG"/>
+
+
+
+
 
