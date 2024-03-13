@@ -96,7 +96,7 @@ first 和 second 分別被定義成了兩個 Kernels
 
 <img src="Images/AI18.PNG"/>
 
-關於 Runtime Ratio 這塊的說明，在官方原文教學中有提到以下這段
+關於 Runtime Ratio 這塊的說明，在官方原文教學 [AI Engine Series 8](https://support.xilinx.com/s/article/1212243?language=zh_CN) 中有提到以下這段
 ```
 It is important to note that the run-time ratio does not schedule the execution of the kernels.
 
@@ -163,3 +163,42 @@ Each kernel is mapped to a different tile.
 回到 simple_test，點選 Run Configurations
 
 <img src="Images/AI33.PNG"/>
+
+勾選 Generate Trace，並也把 VCD 打勾
+
+VCD 全名為 Value Change Dump，可以記錄 AIE 運行時的事件
+
+<img src="Images/AI34.PNG"/>
+
+設定結束後點選 Run，會產生出新檔案－default.aierun_summary
+
+<img src="Images/AI35.PNG"/>
+
+雙擊 default.aierun_summary 後一樣會跑出 Vitis Analyzer，可以發現多了 Trace 選項
+
+<img src="Images/AI36.PNG"/>
+
+我們可以透過以下計算式得出單個 Function(Simple) 在運行時所需要的 Frequency 與 Run Cycles
+
+<img src="Images/AI37.PNG"/>
+
+同樣的，我們也可以依照此算出單個 AIE 的 Cycle Budget，等於是 Function 必須在該 Cycle Budget 內執行完畢，不然就必須拆分成兩個 Function 去對應兩個 Kernels，再交由額外的 AIE 來完成運算
+```
+Run-time ratio = (cycles for one run of the kernel)/(cycle budget)
+Cycle Budget = Block Size * (AI Engine Clock Frequency/Sample Frequency)
+For example, take a kernel which processes a window of 128 samples and the input samples frequency (for example from an ADC) is 245.76MHz.
+Cycle Budget is 128*(1000/245.76) = 520 cycles
+```
+
+當然多個 AIE 執行 Function 會直接影響的就是運行時間，下圖左為多個 Kernels 在同一 AIE 內，圖右為多個 Kernels 搭配至多個 AIE
+
+<img src="Images/AI38.PNG"/>
+
+AIE 在讀取資料時分成兩種形式，Window Based Access 與 Stream Based Access
+
+Window Based Access 主要會去讀取 AIE 中的 local memory 資料，或是鄰近 AIE 的 local memory 資料，因此在 Kernel 要進行運算前，會需要等待這些 local memory 將資料填滿，造成初始會有些許 delay 發生
+
+Stream Based Access 則是會透過 AXI-Stream 來去與外部獲取資料，但會有若一 Kernel 處理資料速度沒有達到預期，下游的 Kernel 就會有短暫等待時間發生 
+
+<img src="Images/AI39.PNG"/>
+
