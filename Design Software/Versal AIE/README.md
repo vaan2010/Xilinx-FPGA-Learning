@@ -2,6 +2,8 @@
 + 此篇主要說明如何透過 Vitis 針對 Versal AI Engine 進行算術運算的設計
 
 **Last update: 2024/03/12**
+- [ ] Vitis Versal AIE API
+- [ ] Run Model on Versal AIE
 
 ### 1. 開啟 Vitis，並新建一 Application Project
 
