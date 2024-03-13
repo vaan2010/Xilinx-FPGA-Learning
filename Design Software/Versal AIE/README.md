@@ -78,7 +78,88 @@ CINT16 代表 16-bit Real number with 16-bit Imaginary number
 
 <img src="Images/AI15.PNG"/>
 
++ 先從第一部份來說明
 
+first 和 second 分別被定義成了兩個 Kernels
 
+並且還定義了 input port 和 output port
 
+初規劃的 Graph 如下
 
+<img src="Images/AI16.PNG"/>
+
++ 第二部分則定義了資料流的方向與 Kernel 內所要執行的 Function 是哪一隻(Simple)
+
+<img src="Images/AI17.PNG"/>
+
++ 第三部分將要 import 的 kernel function 利用 source 代入進來，並設定 AIE 處理時間比例
+
+<img src="Images/AI18.PNG"/>
+
+關於 Runtime Ratio 這塊的說明，在官方原文教學中有提到以下這段
+```
+It is important to note that the run-time ratio does not schedule the execution of the kernels.
+
+The kernel will be fired as soon as the data is available and the core is not already running another kernel. Even if the run-time ratio is set to 0.1 for a kernel, the kernel might be running 100% of the time on the AI Engine core (assuming there is only one kernel mapped to the core). In our case, because the two kernels are running the same functions, they might be running 50% of the time with the run-time ratio set to 0.1 or set to 0.4.
+```
+
+<img src="Images/AI19.PNG"/>
+
+```
+We can now try to increase the run-time ratio for the two kernels to 0.6.
+
+When we look at the graph view we can see that the usage has now changed:
+
+Each kernel is mapped to a different tile.
+```
+
+<img src="Images/AI20.PNG"/>
+
+### 11. 開啟 project.cpp
+內容敘述了實體 data 的 input 和 output 為何種形式(.txt)
+
+並且定義之前步驟中規畫好的 Graph 需要運行幾次
+
+<img src="Images/AI21.PNG"/>
+
+### 12. Build and Run Project
+
+<img src="Images/AI22.PNG"/>
+
+<img src="Images/AI23.PNG"/>
+
+透過 Vitis 內選項檢驗運算完的結果是否與 Ground Truth 相同
+
+<img src="Images/AI24.PNG"/>
+
++ 有差異
+<img src="Images/AI25.PNG"/>
+
++ 無差異
+<img src="Images/AI26.PNG"/>
+
+### 13. 確認 Kernel 被擺放至 AIE 的位置與實際生成 Graph
+我們可以點選 Emulation-AIE 中的 project.aiecompile_summary 這個檔案，會自動生成另一視窗為 Vitis Analyzer
+
+<img src="Images/AI27.PNG"/>
+
++ Graph
+
+<img src="Images/AI28.PNG"/>
+
+<img src="Images/AI29.PNG"/>
+
+<img src="Images/AI30.PNG"/>
+
+### 14. 確認 AIE 執行時每個動作的執行順序與花費時間
+先點選 simple_test 的 C/C++ Build Settings
+
+<img src="Images/AI31.PNG"/>
+
+再將 Kernel optimization 關閉，為了查看最原始的狀態
+
+<img src="Images/AI32.PNG"/>
+
+回到 simple_test，點選 Run Configurations
+
+<img src="Images/AI33.PNG"/>
