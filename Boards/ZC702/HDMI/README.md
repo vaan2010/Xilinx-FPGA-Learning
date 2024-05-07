@@ -82,55 +82,53 @@ Data Width 不一致
 
 <img src="Images/TPG25.png"/>
 
-<img src="Images/TPG26.png"/>
-
 ### 2. 加入 Constraint，內容包括 HDMI 如何連接到 ADV7511 的腳位，可以下載該目錄下的 zip，並在 XVES_0019\src\constr\ZC702.xdc 找到 XDC 檔案
 
-<img src="Images/TPG27.png"/>
+<img src="Images/TPG26.png"/>
 
 + 修改 Constraint 內容以符合 Block Design 中的 port 命名
 
-<img src="Images/TPG28.png"/>
+<img src="Images/TPG27.png"/>
 
 ### 3. Create HDL Wrapper & Generate Bitstream
 
-<img src="Images/TPG29.png"/>
+<img src="Images/TPG28.png"/>
 
 ### 4. Export Hardware，這步會輸出 XSA 到 Vitis 中做 C Code 的撰寫來控制 FPGA
 
-<img src="Images/TPG30.png"/>
+<img src="Images/TPG29.png"/>
 
 ## Build ZC702 Application on Vitis
 
 ### 5. 打開 Vitis，匯入 XSA 建立 Platform
 
-<img src="Images/TPG31.png"/>
+<img src="Images/TPG30.png"/>
 
 + Platform 建立後要進行 Build 以產生連結檔
 
-<img src="Images/TPG32.png"/>
+<img src="Images/TPG31.png"/>
 
 ### 6. 建立 Application，並匯入 zip 內 src 的檔案
+
+<img src="Images/TPG32.png"/>
 
 <img src="Images/TPG33.png"/>
 
 <img src="Images/TPG34.png"/>
 
-<img src="Images/TPG35.png"/>
-
 ### 7. 刪除原先的 helloworld.c，並開啟 tpg_hdmi_zc702.c 加入下圖框選的 Code
 
-<img src="Images/TPG36.png"/>
+<img src="Images/TPG35.png"/>
 
 ### 8. ZC702 硬體配置
 
-<img src="Images/TPG37.png"/>
+<img src="Images/TPG36.png"/>
 
 ### 9. 右鍵 Application 並選擇 Run as 1 Launch Hardware，查看結果
 
-<img src="Images/TPG38.png"/>
+<img src="Images/TPG37.png"/>
 
-<img src="Images/TPG39.png"/>
+<img src="Images/TPG38.png"/>
 
 # ZC702 Test Pattern Generator Output Multiple Resolution Flow 
 
@@ -140,13 +138,13 @@ Data Width 不一致
 
 + Video Timing Controller－開啟 AXI-4 Lite 是為了讓 Vitis 中的 C Code 能夠控制該 IP
 
-<img src="Images/TPG40.png"/>
+<img src="Images/TPG39.png"/>
 
 + Clocking Wizard
 
 開啟 Dynamic Reconfig 才能透過 Vitis 從 AXI-4 Lite 進行 Clock 更新
 
-<img src="Images/TPG41.png"/>
+<img src="Images/TPG40.png"/>
 
 勾選想要輸出不同解析度對應的 Clock 數值
 
@@ -156,25 +154,25 @@ Data Width 不一致
 
 148.5 𝑀ℎ𝑧=1080𝑃
 
-<img src="Images/TPG42.png"/>
+<img src="Images/TPG41.png"/>
 
 開啟 MMCM Override
 
-<img src="Images/TPG43.png"/>
+<img src="Images/TPG42.png"/>
 
 記清楚以下除頻數值，Vitis 會用到
 
-<img src="Images/TPG44.png"/>
+<img src="Images/TPG43.png"/>
 
 回來取消其他兩個 output clock，記得去修改 VTC 對應的解析度
 
-<img src="Images/TPG45.png"/>
+<img src="Images/TPG44.png"/>
 
 + 將以上 IP 開始進行連接
 
-<img src="Images/TPG46.png"/>
+<img src="Images/TPG45.png"/>
 
-<img src="Images/TPG47.png"/>
+<img src="Images/TPG46.png"/>
 
 ### 2. 與先前一樣，產生 Bitstream 與匯出 XSA
 
@@ -182,19 +180,19 @@ Data Width 不一致
 
 ### 3. Update 之前建立好的 Platform，來匯入新的 XSA，一樣要重 Build
 
-<img src="Images/TPG48.png"/>
+<img src="Images/TPG47.png"/>
 
 ### 4. 建立 Application，一樣匯入先前修改好的 Code，並在 tpg_hdmi_zc702.c 中再修改以下
 
-<img src="Images/TPG49.png"/>
+<img src="Images/TPG48.png"/>
 
 若未換解析度的話，Clocking Wizard Configuration 那兩行要註解掉
 
-<img src="Images/TPG50.png"/>
+<img src="Images/TPG49.png"/>
 
 若未換解析度的話，VTC Configuration 那三行要註解掉
 
-<img src="Images/TPG51.png"/>
+<img src="Images/TPG50.png"/>
 
 注意，單純不更改原始解析度或 Clock 速度不需要 ReConfig，但有 AXI-4 Lite 就需要在 Vitis 內 Initialize 該 IP 以及 Enable 才會動作
 
@@ -202,23 +200,23 @@ Data Width 不一致
 
 + 480P
 
-<img src="Images/TPG52.png"/>
+<img src="Images/TPG51.png"/>
 
 + 720P
+
+<img src="Images/TPG52.png"/>
 
 <img src="Images/TPG53.png"/>
 
 <img src="Images/TPG54.png"/>
 
-<img src="Images/TPG55.png"/>
-
 + 1080P
+
+<img src="Images/TPG55.png"/>
 
 <img src="Images/TPG56.png"/>
 
 <img src="Images/TPG57.png"/>
-
-<img src="Images/TPG58.png"/>
 
 ## Reference
 
