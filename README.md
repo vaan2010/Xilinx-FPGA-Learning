@@ -20,7 +20,7 @@
 
 ## Software
 
-- [ ] **ISE**
+- [x] **ISE**
 - [ ] **Petalinux**
 - [ ] **Vitis AI**
 - [ ] **Vitis HLS**
