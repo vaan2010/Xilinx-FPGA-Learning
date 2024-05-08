@@ -1,11 +1,11 @@
 # VC707 IBERT Flow
 + 此篇主要說明如何針對 VC707 進行 IBERT 測試並產生眼圖
 
-** Last update: 2024/05/08**
+**Last update: 2024/05/08**
 
-** 注意: VC707 Debug Core 只支援到最高 Vivado 2019.2 版本**
+**注意: VC707 Debug Core 只支援到最高 Vivado 2019.2 版本**
 
-** 可參考目錄下官方文件－xtp210-vc707-ibert-c-2015-1.pdf**
+**可參考目錄下官方文件－xtp210-vc707-ibert-c-2015-1.pdf**
 
 ## Vivado 2015.1
 
