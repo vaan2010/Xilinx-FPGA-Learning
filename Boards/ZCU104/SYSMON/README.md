@@ -63,7 +63,7 @@
 
 ### 9. Result - 有加上運行時間顯示，使用 XTime_GetTime
 
-​<img src="./Images/SYS15.png"/>
+​<img src="./Images/SYS155.png"/>
 
 ## APPENDIX: xil_printf vs printf
 
