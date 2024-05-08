@@ -41,7 +41,7 @@
 
 ### 4. 當然跟使用一般 IP 一樣，要先 instance SysMon，Configure SysMon，Get SysMon DeviceID 等等 
 
-​<img src="./Images/SYS9.png"/>
+​<img src="./Images/SYS19.png"/>
 
 ### 5. 以 VCC_PSBATT 為例
 
