@@ -9,7 +9,7 @@
 - [ ] **Vitis AI**
 - [ ] **PYNQ**
 - [ ] **VC707－HDMI**
-- [ ] **VC707－IBERT**
+- [x] **VC707－IBERT**
 - [ ] **VPK120**
 - [ ] **ZC702－Mixer**
 - [ ] **ZCU104－DP**
