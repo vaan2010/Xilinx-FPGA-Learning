@@ -67,7 +67,7 @@
 
 ## APPENDIX: xil_printf vs printf
 
-+ 可以參考以下這篇，簡單來說 xil_printf 不支援 float
++ 可以參考以下這兩篇，簡單來說 xil_printf 不支援 float
 
 [Which printf or xil_print?](https://support.xilinx.com/s/question/0D52E00006iHje3SAC/which-printf-or-xilprint?language=en_US)
 
