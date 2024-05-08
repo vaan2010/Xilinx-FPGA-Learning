@@ -113,22 +113,20 @@ Program the generated bitstream and Test IBERT performance
 
 <img src="Images/IB24.png"/>
 
-<img src="Images/IB25.png"/>
-
 ## APPENDIX
 
 ### 1. Follow the board IBERT tutorial on Xilinx Website.
 
-<img src="Images/IB26.png"/>
+<img src="Images/IB25.png"/>
 
 ### 2. Check the board schematic (notice the difference version cause difference pin assignment).
 
-<img src="Images/IB27.png"/>
+<img src="Images/IB26.png"/>
 
 ### 3. Check the correct system clock and MGT Quad for testing.
 
-<img src="Images/IB28.png"/>
+<img src="Images/IB27.png"/>
 
 ### 4. Notice that additional FMC Card if needed for IBERT testing.
 
-<img src="Images/IB29.png"/>
+<img src="Images/IB28.png"/>
