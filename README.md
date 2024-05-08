@@ -14,7 +14,7 @@
 - [ ] **ZC702－Mixer**
 - [ ] **ZCU104－DP**
 - [ ] **ZCU104－HDMI**
-- [ ] **ZCU104－SYSMON**
+- [x] **ZCU104－SYSMON**
 - [ ] **ZCU208**
 - [ ] **ZCU216**
 
