@@ -1,6 +1,6 @@
 # To-Do List
 
-**Last update: 2024/05/07**
+**Last update: 2024/05/09**
 
 ## Board
 
@@ -17,6 +17,7 @@
 - [x] **ZCU104－SYSMON**
 - [ ] **ZCU208**
 - [ ] **ZCU216**
+- [ ] **KCU116**
 
 ## Software
 
