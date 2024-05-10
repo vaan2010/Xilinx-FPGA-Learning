@@ -1,7 +1,0 @@
-+--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
-+--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| clk_out1_design_1_clk_wiz_0_1 |clk_out1_design_1_clk_wiz_0_1 |                                 design_1_i/axi_iic_0/U0/X_IIC/WRITE_FIFO_CTRL_I/Addr_Counters[3].FDRE_I/D|
-| clk_out1_design_1_clk_wiz_0_1 |clk_out1_design_1_clk_wiz_0_1 |design_1_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_319/tpgForeground_U0/grp_tpgForeground_Pipeline_VITIS_LOOP_730_2_fu_196/boxTop_fu_134_reg[15]/D|
-| clk_out1_design_1_clk_wiz_0_1 |clk_out1_design_1_clk_wiz_0_1 |design_1_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_319/tpgForeground_U0/grp_tpgForeground_Pipeline_VITIS_LOOP_730_2_fu_196/boxLeft_fu_138_reg[15]/D|
-+--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
