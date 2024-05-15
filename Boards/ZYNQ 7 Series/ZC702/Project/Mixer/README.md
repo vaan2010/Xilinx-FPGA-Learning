@@ -7,7 +7,7 @@
 
 + Vivado 2020.1, 2020,2, and 2021.1 有相關影像處理 IP 的 Bug 存在，像是 VPSS, Video Mixer, and Video Multi-Scaler 都可能有卡在 synthesis 不過的問題，可以參考以下連結排除：
 
-[Vivado HLS - 2021.1 - Why does synthesis stall when using Windows OS?] (https://support.xilinx.com/s/article/Patch-AR-for-HLS-IP-patch?language=en_US)
+[Vivado HLS - 2021.1 - Why does synthesis stall when using Windows OS?](https://support.xilinx.com/s/article/Patch-AR-for-HLS-IP-patch?language=en_US)
 
 ### 0. 下載上述連結的 zip 檔案後將其解壓縮到 C 槽，並增加一環境變數後重啟 Vivado 即可解決
 
