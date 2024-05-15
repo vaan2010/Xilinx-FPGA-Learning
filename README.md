@@ -11,7 +11,7 @@
 - [ ] **VC707－HDMI**
 - [x] **VC707－IBERT**
 - [ ] **VPK120**
-- [ ] **ZC702－Mixer**
+- [x] **ZC702－Mixer**
 - [ ] **ZCU104－DP**
 - [ ] **ZCU104－HDMI**
 - [x] **ZCU104－SYSMON**
