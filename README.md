@@ -17,7 +17,6 @@
 
 ## Software
 
-- [x] **ISE**
 - [ ] **Petalinux**
 - [ ] **Vitis AI**
 - [ ] **Vitis HLS**
@@ -26,6 +25,8 @@
 
 
 ## Has Finished
+
+- [x] **ISE**
 - [x] **VC707－IBERT**
 - [x] **ZC702－Mixer**
 - [x] **ZCU104－DP**
