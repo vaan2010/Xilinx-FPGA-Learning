@@ -9,12 +9,9 @@
 - [ ] **Vitis AI**
 - [ ] **PYNQ**
 - [ ] **VC707－HDMI**
-- [x] **VC707－IBERT**
+
 - [ ] **VPK120**
-- [x] **ZC702－Mixer**
-- [ ] **ZCU104－DP**
 - [ ] **ZCU104－HDMI**
-- [x] **ZCU104－SYSMON**
 - [ ] **ZCU208**
 - [ ] **ZCU216**
 - [ ] **KCU116**
@@ -27,3 +24,10 @@
 - [ ] **Vitis HLS**
 - [ ] **Vitis**
 - [ ] **Vivado**
+
+
+## Has Finished
+- [x] **VC707－IBERT**
+- [x] **ZC702－Mixer**
+- [x] **ZCU104－DP**
+- [x] **ZCU104－SYSMON**
