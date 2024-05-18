@@ -38,3 +38,6 @@
 - [x] **VC707－IBERT**
 - [x] **ZC702－HDMI**
 - [x] **ZC702－Mixer**
+- [x] **KD240－BIST**
+- [x] **KD240－PWM**
+- [x] **KD240－Face Detection**
