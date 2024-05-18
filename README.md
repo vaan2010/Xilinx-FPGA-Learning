@@ -37,3 +37,4 @@
 
 - [x] **VC707－IBERT**
 - [x] **ZC702－HDMI**
+- [x] **ZC702－Mixer**
