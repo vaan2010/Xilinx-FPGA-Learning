@@ -1,43 +1,25 @@
-# To-Do List
+# Monee
 
-**Last update: 2024/05/09**
+## 已知問題 (Known Issues)
 
-## Board
+- **記帳圓餅圖無法上下滑動**：記帳頁面的圓餅圖有時會發生無法上下滑動的情況，請先等待約一秒後再次滑動即可。
 
-- [ ] **KV260－Automotive_Project**
-- [ ] **KV260－Ubuntu**
-- [ ] **Vitis AI**
-- [ ] **PYNQ**
-- [ ] **VC707－HDMI**
-- [ ] **VPK120**
-- [ ] **ZCU104－HDMI**
-- [ ] **ZCU208**
-- [ ] **ZCU216**
-- [ ] **KCU116**
+---
 
-## Software
+## 更新紀錄 (Changelog)
 
-- [ ] **Petalinux**
-- [ ] **Vitis AI**
-- [ ] **Vitis HLS**
-- [ ] **Vitis**
-- [ ] **Vivado**
+> 每次新增功能或修改時，請在此處加上日期與說明。
 
+### 2025-02-23
 
-## Has Finished
-
-- [x] **ISE**
-- [x] **VC707－IBERT**
-- [x] **ZC702－Mixer**
-- [x] **ZCU104－DP**
-- [x] **ZCU104－SYSMON**
-
-
-## Split to New Repository
-
-- [x] **VC707－IBERT**
-- [x] **ZC702－HDMI**
-- [x] **ZC702－Mixer**
-- [x] **KD240－BIST**
-- [x] **KD240－PWM**
-- [x] **KD240－Face Detection**
+- **新增銀行支援**：新增 9 家銀行至 `BANK_DATA`
+  - 高雄銀行 (016)
+  - 台中銀行 (053)
+  - 京城銀行 (054)
+  - 瑞興銀行 (101)
+  - 華泰銀行 (102)
+  - 新光銀行 (103)
+  - 板信商業銀行 (118)
+  - 將來銀行 (823)
+  - LINE Bank (824)
+- **建立 README.md**：新增更新紀錄
